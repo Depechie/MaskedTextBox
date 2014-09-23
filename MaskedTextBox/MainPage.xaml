@@ -5,9 +5,17 @@
     xmlns:local="using:MaskedTextBox"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:behaviors="using:MaskedTextBox.Behaviors"
+    xmlns:interactivity="using:MaskedTextBox.Interactivity"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <TextBox x:Name="UserID" Header="Current mask 99.99.99-999.99"
+                 Margin="19,19,0,0"
+                 VerticalAlignment="Top">
+            <interactivity:Interaction.Behaviors>
+                <behaviors:TextBoxInputMaskBehavior Mask="99.99.99-999.99" />
+            </interactivity:Interaction.Behaviors>
+        </TextBox>
     </Grid>
 </Page>
